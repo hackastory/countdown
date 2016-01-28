@@ -1,7 +1,7 @@
 'use strict';
 
 var sound = new Audio('stop.mp3');
-var TIME_IN_SECONDS = 60;
+var countdownTime = 60;
 var isCounting = false;
 var $logo = $("#logo");
 var $text = $("#text");
@@ -43,8 +43,8 @@ function setup() {
     $times.forEach(function(time) {
         time.onclick = function(e) {
             var time = e.target.getAttribute('data-time');
-            TIME_IN_SECONDS = time;
-            $text.innerHTML = TIME_IN_SECONDS / 60;
+            countdownTime = time;
+            $text.innerHTML = countdownTime / 60;
             console.log('Setting time to ' + time);
         }
     })
@@ -57,7 +57,7 @@ function countdown() {
 
     function anim() {
         var now = +new Date();
-        var diff = TIME_IN_SECONDS - Math.round( (now - then) / 1000);
+        var diff = countdownTime - Math.round( (now - then) / 1000);
         $text.innerHTML = diff;
 
         if (diff < 1) {
