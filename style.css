@@ -54,4 +54,21 @@ h1 {
     background: #fef343;
     border-radius: 10px;
     padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+    background: #fef343;;
+    border-radius: 4px;
+    padding: 3px 6px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
 }
